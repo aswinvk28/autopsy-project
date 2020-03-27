@@ -1,6 +1,6 @@
 ## An autopsy project that includes imaging a usb drive and retrieving a report from the drive
 
-![](imaging-usb.gif)
+![Disk-Imaging.gif](./Disk-Imaging.gif)
 
 ## Imaging the USB drive
 
