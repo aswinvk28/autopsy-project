@@ -26,3 +26,7 @@ make install
 ## Running autopsy
 
 docker-compose up -d --build
+
+## Generating report 
+
+source ./run_project.sh /opt/autopsy/images/usb-image.dd output.md
