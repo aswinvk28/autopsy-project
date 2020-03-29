@@ -1,0 +1,7 @@
+version: '3'
+services:
+  investigate:
+    build: .
+    container_name: investigate
+    volumes:
+      - .:/opt/autopsy
