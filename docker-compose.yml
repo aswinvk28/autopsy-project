@@ -1,7 +1,7 @@
 version: '3'
 services:
-  investigate:
+  sleuthkit:
     build: .
-    container_name: investigate
+    container_name: sleuthkit
     volumes:
       - .:/opt/autopsy

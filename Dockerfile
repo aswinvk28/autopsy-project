@@ -42,6 +42,16 @@ RUN mkdir -p /opt/autopsy/
 
 RUN apt-get update && apt-get install openssh-server sleuthkit -y
 
+WORKDIR /opt/autopsy/
+RUN wget http://prdownloads.sourceforge.net/dcfldd/dcfldd-1.3.4-1.tar.gz?download
+WORKDIR /opt/autopsy/
+RUN tar -xzf dcfldd-1.3.4-1.tar.gz?download
+WORKDIR /opt/autopsy/dcfldd-1.3.4-1
+RUN ./configure
+WORKDIR /opt/autopsy/dcfldd-1.3.4-1
+RUN make install
+RUN alias dcfldd=/opt/autopsy/dcfldd-1.3.4-1/dcfldd
+
 COPY docker.pub /root/.ssh/authorized_keys
 
 RUN mkdir /var/run/sshd
