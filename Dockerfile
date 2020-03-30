@@ -52,6 +52,7 @@ WORKDIR /opt/autopsy/dcfldd-1.3.4-1
 RUN make install
 RUN alias dcfldd=/opt/autopsy/dcfldd-1.3.4-1/dcfldd
 
+# with passphrase
 COPY docker.pub /root/.ssh/authorized_keys
 
 RUN mkdir /var/run/sshd
